@@ -74,7 +74,7 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
     
 
 ## Model Development
-  - Correlation was first been calculated prior model training:
+  - Correlation against target variable was first been calculated prior model training:
 
     ![correlation](https://user-images.githubusercontent.com/63250608/165358574-dd342176-8d06-4d0f-87e7-56cfc6c46c49.png)
 
@@ -136,40 +136,12 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
 
     The vertical line indicates the 365 days, one whole year. As it is clearly can be seen that the model inidicates that the bookings rarely got cancelled if the lead time is below 365 days. While most of the bookings got cancelled after the lead time reached more than 1 year.
     
-## **Conclusion**
+## Conclusion
  
-  - K-Folding improve the overall score but longer processing time.
-  - The effect of lack of equal representation for all the classes cannot be improve greatly using synthetic data. 
-
-    
-## **Future Improvement**
-  - Pick a more robust and comprehensive data as the model cannot be improved using such an imbalance data.
-  - Needs more representation of other classes.
-  - Using arbiter to test more variables and hyperparameter.
-
-
-
-## Getting Started 
-
-- Clone a copy of the repository. 
-
-```
-
-git clone https://github.com/farisk263/Red-Wine-Quality-Check.git
-
-```
-- Using an IDE and open the RedWineQualityCheck.java
-
-
-
-
-## Built on
-
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [DL4J](https://deeplearning4j.org/) - Deep Learning Library
-
-
-## FAQ 
-
-If you are having problems on installing Maven dependencies. Try to reload it by right-clicking the POM.xml
+  - Repeated guests tend to not cancel their bookings.
+  - Room price per night at both hotels are higher than other months during summer season (June - September).
+  - Family guests tend to stay longer than individuals / couple at both hotels.
+  - Popular length of stay for both hotels would be from 1 to 4 days. Surprisingly, choice of 7 days of stay is also well liked for Resort Hotel's guests as well.
+  - The number of guests cancel their booking is higher than non-cancelled guests when the lead time is more than 50 days.
+  - The number of booking is much higher in summer season (June - September) than other months. On top of that, bookings in winter season (December - March) is the least.
 
