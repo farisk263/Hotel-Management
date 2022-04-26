@@ -10,13 +10,13 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
 
 ## **The Journey**
 
-- **Data Information**
+- ### Data Information
   - It has about 31 features & 1 target variable that will be used later for model training to predict either the guest would cancel the booking or not. 
   - The dataset consists of 20 numerical data & 12 categorical data, including the target variable.
   - The target variable would be `is_canceled` column which contain integer value of 1 and 0. 1 indicates guests will cancel the booking while 0 is not.
     
-- **Descriptive Analytics** 
-  - How many repeated guests decided to cancel booking ?
+- ### Descriptive Analytics
+  - **_How many repeated guests decided to cancel booking ?_**
  
     ![booking repeated_guests](https://user-images.githubusercontent.com/63250608/165352175-e00135e9-3f53-4d1a-a80a-3df7b796ba3b.png)
     
@@ -27,6 +27,38 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
     ```
     
     We can pretty much understand that, mostly of the repeated guests tend to not cancel their bookings. About 85% of the repeated guests decided to proceed with their bookings and stayed at the respective hotels. Only ~15% of them cancelled the bookings because of any other unplanned events.
+    
+  - **_Identified how much guests paid for a night & how the price fluctuated over the year._**
+
+    ```
+    Average cost per person for each hotel per night for at average of all room types:- 
+    Resort Hotel: 47.49 €
+    City Hotel: 59.27 €
+    ```
+    
+    Above are the average room costs per night regardless of the meal & room types. It only covers the actual guests who really come & stay at the hotels. It does not include guests who cancelled their booking. Price is in EUR as the hotels are operated in Portugal.
+    
+    ![average_room_price](https://user-images.githubusercontent.com/63250608/165353847-410128ef-0d94-45c1-834f-50306f342b86.png)
+    
+    The graph explained that during summer season (June - September), the price per night at Resort Hotel spiked as people tend to go to beaches. The demand spiked & triggered the price to jack up even more during that time. Moreover, the price at City Hotel peaked in May & September. The vertical line shown the max price for the respective hotels in a year.
+    
+  - **_Finding the difference of average total nights stayed between guests who has family & no family._**
+  
+    ![night_stay_family](https://user-images.githubusercontent.com/63250608/165354592-a6326459-709b-4539-a20b-046c9f3b6e49.png)
+    
+    Based on the graph above, we can understand that guests which came as family, tend to go for longer stay compared to individual / couple. This is totally understandable as family tends to go for longer vacation compared to individual, who some of them potentially just went for short business trip. We also can see that guests favored to stay longer at resort hotel than city hotel.
+    
+  - **_How long people stay at the hotels ?_**
+
+    ![length_stay](https://user-images.githubusercontent.com/63250608/165354819-fed2d86a-dcb1-42f7-baf8-427e6e9a8705.png)
+    
+    Based on the graph above, both resort & city hotel, most of the guests stayed from 1 - 4 nights. However, 7 nights stay can be well liked by the resort hotel's guests as well. Minority of resort hotel's guests also liked to stay in until 14 nights stays.
+    
+    
+
+    
+
+
 
 - **Architecture**
   - Multiple machine learning classification models were tested against the dataset, eg: Random Forest, Logistic regression, XGBoost & Decision Tree
