@@ -6,37 +6,17 @@
 A hotel dataset is given for this exercise. After a thorough research, the details of the dataset has been found. The dataset is filled with hotel demand data which is acquired from [this paper](https://www.sciencedirect.com/science/article/pii/S2352340918315191). There is two types of hotels from the dataset, one which is _H1_, a resort hotel and _H2_, a city hotel. Both hotels are located in Portugal, based on this paper. The data contains bookings due to arrive between the 1st of July 2015 and 31st of August 2017.
 
 ## **Problem Statement**
-Hotels usually do not know the guests' booking or cancellation pattern & insights on the guests' inclination. It would be better if hotels can predict if a guest will come using a machine learning model
-
-## **The Idea**
-It is better if we can in some way, use machine learning to help predict the quality of wine by the thousands of barrels by just sampling its chemical properties, quatifying it and run it through the deep neural network.
+Hotels usually do not know the guests' booking or cancellation pattern & insights on the guests' inclination. It would be better if hotels can predict if a guest will come using a machine learning model.
 
 ## **The Journey**
 
-- **Data Collection**
-    - The datasets are retrieved from Kaggle (https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009).
-    - It is related to red and white variants of the Portuguese "Vinho Verde" wine that is produced in Northern Portugal. Due to privacy issues, only       physicochemical that is important in characterising a wine and sensory output classes are available.
-    - It have 11 unique labels and can be categorised into 11 classes. However, the dataset only contain 6 quality classes which is rating of 3, 4, 5, 6, 7, 8.
-    - The data is imbalance because there is no representation of lower and higher quality wine.
+- **Data Information**
+    - It has about 31 features & 1 target variable that will be used later for model training to predict either the guest would cancel the booking or not. 
+    - The dataset consists of 20 numerical data & 12 categorical data, including the target variable.
+    - The target variable would be `is_canceled` column which contain integer value of 1 and 0. 1 indicates guests will cancel the booking while 0 is not.
     
-    
-    
-- **Data Processing**
-   - Using Knime to apply SMOTE onto the dataset to try make it equal representation of all the classes by having it filled up the imbalance data synthetically.
-   
-   ![SMOTE](https://user-images.githubusercontent.com/76154147/106477420-1bb2f980-64e3-11eb-8d03-8a8205aef607.jpg)
-   
-     - **Before SMOTE**
-      ![Before Smote](https://user-images.githubusercontent.com/76154147/106477493-2e2d3300-64e3-11eb-8332-f769f17475a0.jpg)
-
-     - **After SMOTE**
-     ![After SMOTE](https://user-images.githubusercontent.com/76154147/106477682-5e74d180-64e3-11eb-8a9b-f586d6d9ecaf.jpg)
-
-  
 - **Architecture**
-  - We improved over **Normal Deep Neural Network** by applying **K-Fold**.  
-
-
+  - Multiple machine learning classification models were tested against the dataset, eg: Random Forest, Logistic regression, XGBoost & Decision Tree
 
 - **Evaluation**
 
