@@ -54,11 +54,25 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
     
     Based on the graph above, both resort & city hotel, most of the guests stayed from 1 - 4 nights. However, 7 nights stay can be well liked by the resort hotel's guests as well. Minority of resort hotel's guests also liked to stay in until 14 nights stays.
     
+  - **_Possibility of bookings got canceled due to high lead time_**
+
+    ![lead_time_over_cancellation](https://user-images.githubusercontent.com/63250608/165355236-ef378083-b120-4bc0-85e6-697d81b0ea57.png)
+
+    It shows that,number of people cancelling their booking is higher than not when the lead time is higher than 50 days (cancellation rate is higher at this point).
     
+  - **_Find out the busiest month for hotels_**
 
+    ![booking_trend](https://user-images.githubusercontent.com/63250608/165355548-06693be7-ee0b-4be2-80cf-c12d89801fa9.png)
+
+    From graph above, both hotels are pretty much occupied in summer (June - September) due to holiday season. Bookings are pretty much less during winter season (December - March).
     
+  - **_Find out the daily price relationship with length of stay_**
+    
+    ![length_stay_over_price](https://user-images.githubusercontent.com/63250608/165355842-bf26de5b-1b74-4a2b-b9cf-3f758691a130.png)
 
-
+    Average daily price for city hotel spiked at 24 days length of stay. Most of the time, resort hotel daily room price can be considered much cheaper than city hotel daily rate. This may possible due to high land value in the city & high land rental cost which cause the daily room rate to be much expensive. Higher length of stay for resort hotel means cheaper price while city hotel's does not have the same effect.
+    
+    
 
 - **Architecture**
   - Multiple machine learning classification models were tested against the dataset, eg: Random Forest, Logistic regression, XGBoost & Decision Tree
