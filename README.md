@@ -74,8 +74,36 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
     
 
 ## Model Development
-  - Multiple machine learning classification models were tested against the dataset, eg: Random Forest, Logistic regression, XGBoost & Decision Tree
+  - Multiple machine learning classification models were tested against the dataset, eg: Random Forest, Logistic regression, XGBoost & Decision Tree.
 
+  - Correlation was first been calculated prior:
+
+    ![correlation](https://user-images.githubusercontent.com/63250608/165358574-dd342176-8d06-4d0f-87e7-56cfc6c46c49.png)
+
+    ```
+    lead_time                         0.293123
+    total_of_special_requests         0.234658
+    required_car_parking_spaces       0.195498
+    booking_changes                   0.144381
+    previous_cancellations            0.110133
+    is_repeated_guest                 0.084793
+    agent                             0.083114
+    adults                            0.060017
+    previous_bookings_not_canceled    0.057358
+    days_in_waiting_list              0.054186
+    adr                               0.047557
+    babies                            0.032491
+    stays_in_week_nights              0.024765
+    company                           0.020642
+    arrival_date_year                 0.016660
+    arrival_date_week_number          0.008148
+    arrival_date_day_of_month         0.006130
+    children                          0.005048
+    stays_in_weekend_nights           0.001791
+    Name: is_canceled, dtype: float64
+    ```
+    
+    We have identified the 5 important numerical features which is highly correlated with booking cancellation status. They are lead time, special requests, car parking spaces required, booking changes & even number of previous cancellation.
 
   - Evaluation
 
