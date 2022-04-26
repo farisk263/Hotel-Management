@@ -117,20 +117,24 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
   
   - Model Debugging using ELI5:
 
-    ```
-    feature	weight	std
-    0	lead_time	0.143413	0.014738
-    1	deposit_type_Non Refund	0.132847	0.110055
-    2	adr	0.095444	0.004118
-    3	deposit_type_No Deposit	0.086032	0.106844
-    4	arrival_date_day_of_month	0.069602	0.002306
-    5	arrival_date_week_number	0.054540	0.002246
-    6	total_of_special_requests	0.050384	0.014383
-    7	agent	0.043701	0.007353
-    8	stays_in_week_nights	0.041340	0.002036
-    9	previous_cancellations	0.038880	0.013721
-    ```
+    | Feature | Weight | Std |
+    | --- | --- | --- |
+    | lead_time | 0.143413 | 0.014738 |
+    | deposit_type_Non Refund |	0.132847 |	0.110055 |
+    |	adr |	0.095444 | 0.004118 |
+    |	deposit_type_No Deposit |	0.086032 |	0.106844 |
+    |	arrival_date_day_of_month |	0.069602 |	0.002306 |
+    |	arrival_date_week_number |	0.054540 |	0.002246 |
+    |	total_of_special_requests |	0.050384 |	0.014383 |
+    |	agent |	0.043701 |	0.007353 |
+    |	stays_in_week_nights |	0.041340 |	0.002036 |
+    |	previous_cancellations |	0.038880 |	0.013721 |
     
+    From the table above, we can find out that the top 3 are the most important features that affect the prediction of the model, which is lead time, deposit type and ADR. The lead time feature bear the heaviest weight in determining either the booking got cancelled or not.
+    
+    ![leadtime_prediction_over_cancellation](https://user-images.githubusercontent.com/63250608/165361342-e1893c89-8a00-4ddb-aa95-16786c9418c3.png)
+
+    The vertical line indicates the 365 days, one whole year. As it is clearly can be seen that the model inidicates that the bookings rarely got cancelled if the lead time is below 365 days. While most of the bookings got cancelled after the lead time reached more than 1 year.
     
 ## **Conclusion**
  
