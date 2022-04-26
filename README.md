@@ -1,4 +1,6 @@
 # Classification on Hotel Booking Cancellation on Hotel Booking Demand Dataset using Machine Learning model
+
+![Portugal & Hotel](https://videohive.img.customer.envatousercontent.com/files/9431b98a-d191-4101-ab26-4e7aac1c3e0e/inline_image_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=0c359dd8c1702b5b8b8a9060e31cec1a)
 ## **Introduction**
 
 A hotel dataset is given for this exercise. After a thorough research, the details of the dataset has been found. The dataset is filled with hotel demand data which is acquired from [this paper](https://www.sciencedirect.com/science/article/pii/S2352340918315191). There is two types of hotels from the dataset, one which is _H1_, a resort hotel and _H2_, a city hotel. Both hotels are located in Portugal, based on this paper. The data contains bookings due to arrive between the 1st of July 2015 and 31st of August 2017.
