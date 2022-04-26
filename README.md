@@ -11,12 +11,26 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
 ## **The Journey**
 
 - **Data Information**
-    - It has about 31 features & 1 target variable that will be used later for model training to predict either the guest would cancel the booking or not. 
-    - The dataset consists of 20 numerical data & 12 categorical data, including the target variable.
-    - The target variable would be `is_canceled` column which contain integer value of 1 and 0. 1 indicates guests will cancel the booking while 0 is not.
+  - It has about 31 features & 1 target variable that will be used later for model training to predict either the guest would cancel the booking or not. 
+  - The dataset consists of 20 numerical data & 12 categorical data, including the target variable.
+  - The target variable would be `is_canceled` column which contain integer value of 1 and 0. 1 indicates guests will cancel the booking while 0 is not.
     
+- **Descriptive Analytics** 
+  - How many repeated guests decided to cancel booking ?
+ 
+    ![booking repeated_guests](https://user-images.githubusercontent.com/63250608/165352175-e00135e9-3f53-4d1a-a80a-3df7b796ba3b.png)
+    
+    ```
+    Percentage of repeated guests who:- 
+    Cancelled: 14.6471%
+    Not Cancelled: 85.3529%
+    ```
+    
+    We can pretty much understand that, mostly of the repeated guests tend to not cancel their bookings. About 85% of the repeated guests decided to proceed with their bookings and stayed at the respective hotels. Only ~15% of them cancelled the bookings because of any other unplanned events.
+
 - **Architecture**
   - Multiple machine learning classification models were tested against the dataset, eg: Random Forest, Logistic regression, XGBoost & Decision Tree
+
 
 - **Evaluation**
 
