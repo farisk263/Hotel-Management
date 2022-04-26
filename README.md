@@ -54,7 +54,7 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
     
     Based on the graph above, both resort & city hotel, most of the guests stayed from 1 - 4 nights. However, 7 nights stay can be well liked by the resort hotel's guests as well. Minority of resort hotel's guests also liked to stay in until 14 nights stays.
     
-  - **_Possibility of bookings got canceled due to high lead time_**
+  - **_Number of bookings got canceled due to high lead time_**
 
     ![lead_time_over_cancellation](https://user-images.githubusercontent.com/63250608/165355236-ef378083-b120-4bc0-85e6-697d81b0ea57.png)
 
