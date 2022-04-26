@@ -74,9 +74,7 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
     
 
 ## Model Development
-  - Multiple machine learning classification models were tested against the dataset, eg: Random Forest, Logistic regression, XGBoost & Decision Tree.
-
-  - Correlation was first been calculated prior:
+  - Correlation was first been calculated prior model training:
 
     ![correlation](https://user-images.githubusercontent.com/63250608/165358574-dd342176-8d06-4d0f-87e7-56cfc6c46c49.png)
 
@@ -103,32 +101,35 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
     Name: is_canceled, dtype: float64
     ```
     
-    We have identified the 5 important numerical features which is highly correlated with booking cancellation status. They are lead time, special requests, car parking spaces required, booking changes & even number of previous cancellation.
+    We have identified the 5 important numerical features which is highly correlated with booking cancellation status. They are lead time, special requests, car parking spaces required, booking changes & number of previous cancellation.
+    
+  - Multiple machine learning classification models were tested against the dataset, eg: Random Forest, Logistic regression, XGBoost & Decision Tree.
+    
+  - Model Evaluation:
+    
+    ```
+    F1 Score values for each models:
+    DecisionTree model: 0.8215
+    RandomForest model: 0.8623
+    LogisticRegression model: 0.7811
+    XGBoost model: 0.8412
+    ```
+  
+  - Model Debugging using ELI5:
 
-  - Evaluation
-
-      - Train Normal
-
-      ![Train Normal](https://user-images.githubusercontent.com/63250608/164382689-5b847d93-586f-4ab0-9a1d-e97316847027.png)
-
-      - Test Normal
-
-      ![Test Normal](https://user-images.githubusercontent.com/63250608/164382754-881c1f42-1d45-42ab-a657-d33ba200db4e.png)
-
-
-      - Train K-Fold
-
-      ![Train K5](https://user-images.githubusercontent.com/63250608/164382844-171bf913-476b-444e-b4d2-c4403f17ea00.png)
-
-
-      - Test K-Fold
-
-      ![Test K5](https://user-images.githubusercontent.com/63250608/164382919-1d60cca8-eaec-4b78-b0e5-78d9ac21180e.png)
-
-
-      - Average F1 Score 
-
-      ![Average F1 all fold](https://user-images.githubusercontent.com/63250608/164382977-a3b62b84-d086-490a-a47e-c5259480df28.png)
+    ```
+    feature	weight	std
+    0	lead_time	0.143413	0.014738
+    1	deposit_type_Non Refund	0.132847	0.110055
+    2	adr	0.095444	0.004118
+    3	deposit_type_No Deposit	0.086032	0.106844
+    4	arrival_date_day_of_month	0.069602	0.002306
+    5	arrival_date_week_number	0.054540	0.002246
+    6	total_of_special_requests	0.050384	0.014383
+    7	agent	0.043701	0.007353
+    8	stays_in_week_nights	0.041340	0.002036
+    9	previous_cancellations	0.038880	0.013721
+    ```
     
     
 ## **Conclusion**
