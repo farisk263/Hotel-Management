@@ -144,4 +144,5 @@ Hotels usually do not know the guests' booking or cancellation pattern & insight
   - Popular length of stay for both hotels would be from 1 to 4 days. Surprisingly, choice of 7 days of stay is also well liked for Resort Hotel's guests as well.
   - The number of guests cancel their booking is higher than non-cancelled guests when the lead time is more than 50 days.
   - The number of booking is much higher in summer season (June - September) than other months. On top of that, bookings in winter season (December - March) is the least.
+  - The trained model predict the possibility guests cancelled the bookings is soaring once the lead time is more than 1 whole year (365 days)
 
